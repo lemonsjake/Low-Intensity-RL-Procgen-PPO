@@ -2,12 +2,12 @@
 A project using OpenAIs' Procgen to learn and exlpore reinforcement learning ...
 
 
-Setting up a Linux Virtual Environment
+## Setting up a Linux Virtual Environment:
 ![venv guidelines (Linux)](https://user-images.githubusercontent.com/89406861/220013729-12755153-877e-49e2-925d-b2c3dd9faa95.png)
-^^^^^ @____JoeVincent____
+@____JoeVincent____
 
 
-Requirements (@____OpenAi____)
+## Requirements:
 cffi==1.15.1
 cloudpickle==2.2.1
 filelock==3.9.0
@@ -25,3 +25,5 @@ Pillow==9.4.0
 procgen==0.10.7
 pycparser==2.21
 zipp==3.13.0
+
+@____OpenAi____
