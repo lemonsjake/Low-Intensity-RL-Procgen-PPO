@@ -1,1 +1,3 @@
-# Procgen-Project
+# Procgen Project
+
+A project using OpenAIs' Procgen to learn and exlpore reinforcement learning ...
