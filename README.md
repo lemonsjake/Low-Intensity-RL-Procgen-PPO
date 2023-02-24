@@ -44,7 +44,10 @@ zipp==3.13.0
 
 ## States
 ### What are the possible states?
-... ??
+Not sure if this is right, but I think it's:
+  Able to move, Not able to move
+  Alive         Level Fail, Level Success
+
 
 ## Observation Space
 ### What are the possible observations?
