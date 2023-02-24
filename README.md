@@ -41,6 +41,7 @@ If using "gym3" and the vectorized environment, the Observation Space is a dicti
 - 64 lists of rgb vals: [[r, g, b], ..., [r, g, b]]
 - 64 lists of those lists of rgb vals: [[[[r, g, b], ..., [r, g, b]], ..., [[r, g, b]]]]
 - Example:
+
   ```
   Observation PER STEP
   [[[[187, 203, 204],
@@ -104,6 +105,7 @@ The 16 environments/games are:
 - Ninja
 - Plunder
 - Starpilot
+
 For detailed info on each environment including reward info, go to https://github.com/openai/procgen#environments.
 
 
