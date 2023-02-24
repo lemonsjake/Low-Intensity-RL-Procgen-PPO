@@ -109,6 +109,7 @@ The 16 environments/games are:
 For detailed info on each environment including reward info, go to https://github.com/openai/procgen#environments.
 
 
+## Most of the content provided was obtained via others
 @article{cobbe2019procgen,
   title={Leveraging Procedural Generation to Benchmark Reinforcement Learning},
   author={Cobbe, Karl and Hesse, Christopher and Hilton, Jacob and Schulman, John},
