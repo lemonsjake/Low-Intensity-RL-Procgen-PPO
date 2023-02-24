@@ -7,6 +7,19 @@ A project using OpenAIs' Procgen to learn and exlpore reinforcement learning ...
 @____JoeVincent____
 
 
+## Setting up a Windows Virtual Environment:
+1) Install virtualenv:
+    pip install virtualenv
+2) Create your Project Folder:
+    mkdir project_folder_name
+3) Enter your Project Folder:
+    cd project_folder_name
+4) Create the Virtual Environment:
+    virtualenv venv_name
+5) Enter your Virtual Environment:
+    venv_name\Scripts\activate
+
+
 ## Requirements:
 cffi==1.15.1
 cloudpickle==2.2.1
