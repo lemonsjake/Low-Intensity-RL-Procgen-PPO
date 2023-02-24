@@ -29,18 +29,14 @@ zipp==3.13.0
 @____OpenAi____
 
 
-The observation space is a box space with the RGB pixels the agent sees in a numpy array of shape (64, 64, 3). The expected step rate for a human player is 15 Hz.
-The action space is Discrete(15) for which button combo to press. The button combos are defined in env.py.
-If you are using the vectorized environment, the observation space is a dictionary space where the pixels are under the key "rgb".
-
-
 ## States
 ### What are the possible states?
-...
+... ??
 
 ## Observation Space
 ### What are the possible observations?
-The Observation Space is a Numpy array of shape (64, 64, 3) where values represent RGB pixels the agent sees.
+If using "gym" and the regular environment, the Observation Space is a Numpy array of shape (64, 64, 3) where values represent RGB pixels the agent sees.
+If using "gym3" and the vectorized environment, the Observation Space is a dictionary space where the pixels are under the key "rgb".
 - 3 vals per list: [r, g, b]
 - 64 lists of rgb vals: [[r, g, b], ..., [r, g, b]]
 - 64 lists of those lists of rgb vals: [[[[r, g, b], ..., [r, g, b]], ..., [[r, g, b]]]]
@@ -87,6 +83,33 @@ The Action Space is Discrete(15) and an action is a tuple of shape 2 where value
 ### How are the actions of left/right/etc mapped to numbers?
 - Example: [13 9] which would be ??
 
+
 ## Rewards
 ### What are the possible rewards?
-...
+The rewards depends on which environment is being used. There are 16 different environments where each is a different game w/ unique game rules.
+The 16 environments/games are:
+- Bigfish
+- Bossfight
+- Caveflyer
+- Chaser
+- Climber
+- Coinrun
+- Dodgeball
+- Fruitbot
+- Heist
+- Jumper
+- Leaper
+- Maze
+- Miner
+- Ninja
+- Plunder
+- Starpilot
+For detailed info on each environment including reward info, go to https://github.com/openai/procgen#environments.
+
+
+@article{cobbe2019procgen,
+  title={Leveraging Procedural Generation to Benchmark Reinforcement Learning},
+  author={Cobbe, Karl and Hesse, Christopher and Hilton, Jacob and Schulman, John},
+  journal={arXiv preprint arXiv:1912.01588},
+  year={2019}
+}
