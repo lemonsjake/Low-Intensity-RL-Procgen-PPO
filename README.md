@@ -98,7 +98,31 @@ The Action Space is Discrete(15) and an action is a tuple of shape 2 where value
   - ("E",)
 - Example: [13 9] which would be ??
 ### How are the actions of left/right/etc mapped to numbers?
-- Example: [13 9] which would be ??
+- Example: [13 9] which would be [Q D]
+```
+def keys_to_act(self, keys_list: Sequence[Sequence[str]]) -> List[Optional[np.ndarray]]:
+        """
+        Convert list of keys being pressed to actions, used in interactive mode
+        """
+        result = []
+        for keys in keys_list:
+            action = None
+            max_len = -1
+            for i, combo in enumerate(self.get_combos()):
+                pressed = True
+                for key in combo:
+                    if key not in keys:
+                        pressed = False
+
+                if pressed and (max_len < len(combo)):
+                    action = i
+                    max_len = len(combo)
+
+            if action is not None:
+                action = np.array([action])
+            result.append(action)
+        return result
+```
 
 
 ## Rewards
