@@ -74,9 +74,9 @@ The Action Space is Discrete(15) and an action is a tuple of shape 2 where value
   - ("S",)
   - ("Q",)
   - ("E",)
-- Example: [13 9] which would be ??
+- Example: [5] which would be ??
 ### How are the actions of left/right/etc mapped to numbers?
-- Example: [13 9] which would be [Q D]
+- Example: [5] which would be ("UP")
 ```
 def keys_to_act(self, keys_list: Sequence[Sequence[str]]) -> List[Optional[np.ndarray]]:
         """
