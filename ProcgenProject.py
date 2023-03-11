@@ -2,20 +2,24 @@
 #import numpy as np  #
 #import seaborn as sns  #
 
-
-
 import gym
 from stable_baselines3 import PPO
 
-env = gym.make("procgen:procgen-coinrun-v0", render_mode="rgb_array")#"human"
+# sess.graph contains the graph definition; that enables the Graph Visualizer.
+file_writer = tf.summary.FileWriter('C:\Users\xlemo\Desktop\Procgen Project\venv\Logs', sess.graph)
 
-model = PPO("CnnPolicy", env, verbose=1)  #MlpPolicy --> CnnPolicy (because input is image)
+env = gym.make("procgen:procgen-coinrun-v0", render_mode="rgb_array")#"human"
+print("GYM MADE")
+model = PPO("CnnPolicy", env, verbose=1, tensorboard_log="C:\Users\xlemo\Desktop\Procgen Project\venv\Logs")  #MlpPolicy --> CnnPolicy (because input is image)
+print("MODEL MADE")
 model.learn(total_timesteps=10_000)
 print("DONE LEARNING")
 #step = 0
 #step_limit = 1_000  #
 vec_env = model.get_env()
+print("VEC_ENV MADE")
 obs = vec_env.reset()
+print("OBSERVATION MADE")
 for i in range(1000):
     action, _states = model.predict(obs, deterministic=True)
     obs, reward, done, info = vec_env.step(action)
