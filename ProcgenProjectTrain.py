@@ -5,7 +5,7 @@ from datetime import datetime
 timestamp = datetime.now().strftime('%d-%m-%y-%H_%M')
 
 print("\nBegin Learning")
-env = gym.make("procgen:procgen-coinrun-v0", num_levels=100,
+env = gym.make("procgen:procgen-coinrun-v0", num_levels=0,
                render_mode="rgb_array")  # num_levels = 1, 10, 25, 50, 100
 
 model = PPO("CnnPolicy", env, verbose=1, 
