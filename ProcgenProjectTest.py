@@ -8,8 +8,8 @@ print("\nLoaded Model")
 print("\nTesting Model")
 vec_env = model.get_env()
 obs = vec_env.reset()
-for i in range(1_000):  #250, 500, etc
-    if (i % 50) == 0:   #10, 100, etc
+for i in range(5_000):  #250, 500, etc
+    if (i % 100) == 0:   #10, 100, etc
         print("step = " + str(i))
     action, _states = model.predict(obs, deterministic=True)
     obs, reward, done, info = vec_env.step(action)
