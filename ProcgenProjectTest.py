@@ -1,8 +1,8 @@
 import gym
 from stable_baselines3 import PPO
 
-env_test = gym.make("procgen:procgen-coinrun-v0", num_levels=0, render_mode="human")  # num_levels = 1, 10, 25, 50, 100
-model = PPO.load("models/31-03-23-17_23", env=env_test)
+env_test = gym.make("procgen:procgen-coinrun-v0", num_levels=1, render_mode="human")  # num_levels = 1, 10, 25, 50, 100
+model = PPO.load("models/04-04-23-14_29", env=env_test)
 print("\nLoaded Model")
 
 print("\nTesting Model")
