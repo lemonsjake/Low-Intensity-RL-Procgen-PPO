@@ -2,13 +2,13 @@
 import argparse
 
 from procgen import ProcgenGym3Env
-#from .env import ENV_NAMES
 from gym3 import Interactive, VideoRecorderWrapper, unwrap
 
 
 ### print key-press numerical representation >> env.py line 196 in keys_to_act()
 
 
+#from .env import ENV_NAMES
 ENV_NAMES = [
     "bigfish",
     "bossfight",
