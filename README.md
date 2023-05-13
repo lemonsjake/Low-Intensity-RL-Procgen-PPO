@@ -22,9 +22,7 @@ A project using OpenAIs' Procgen to learn and exlpore reinforcement learning ...
 
 ## States
 ### What are the possible states?
-Not sure if this is right, but I think it's:
-  Able to move, Not able to move
-  Alive         Level Fail, Level Success
+Alive / Able to move, Not able to move, Level Fail, Level Success
 
 
 ## Observation Space
